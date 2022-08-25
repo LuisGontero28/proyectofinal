@@ -28,8 +28,10 @@ nav ul li a:hover {
 ul li {
   list-style: none; }
 
-.w-16 {
-  width: 16%; }
+.tuti {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
 
 .nav {
   width: 100%;
@@ -38,11 +40,11 @@ ul li {
   padding: 10px;
   border: solid 1px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center; }
 
 .logo {
-  height: 50px; }
+  height: 56px; }
 
 .nav-logo {
   background-color: black;
@@ -160,7 +162,7 @@ ul li {
   cursor: pointer; }
 
 .contactor {
-  width: 50%;
+  width: 600px;
   text-align: center;
   margin-top: 10px; }
 
@@ -177,33 +179,3 @@ ul li {
 .tamaño-super {
   width: 200px;
   height: 200px; }
-
-/* productos */
-.imagen1 {
-  width: 400px;
-  height: 400px; }
-
-.todo {
-  grid-template-columns: auto;
-  text-align: center; }
-
-.center {
-  text-align: center;
-  margin-top: 50px; }
-
-/* redes */
-.roww {
-  text-align: center; }
-
-.contacto45 {
-  text-align: center;
-  margin-top: 40px; }
-
-.contacto45:hover {
-  transform: translate(10px);
-  cursor: pointer; }
-
-.contactor {
-  width: 50%;
-  text-align: center;
-  margin-top: 10px; }
