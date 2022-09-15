@@ -41,8 +41,6 @@ while(socio == si){
     socio = parseFloat(prompt("sos socio:si o no"))
 }
 
-
-
 //switch
 let ingreso = prompt("Ingresa una opcion \n 1=Carbon \n 2=Leña \n 3=Postes \n 4=Tablas \n 5=Varillas"
 );
@@ -98,8 +96,21 @@ let ingresoAncho=prompt("Ingresa el ancho de tabla");
 //con esto y lo anterior puedo construir un formulario, que haga un pedido de madera nuevo
 const pedido5= new Auto(ingresoTipo, ingresoLargo, ingresoAncho,);
 console.log(pedido5);
-
-
+//change
+const opcionesDeIn= document.querySelectorAll('input')
+console.log(opcionesDeIn);
+opcionesDeIn[0].addEventListener('change',()=>{
+    console.log('cambio');
+})
+opcionesDeIn[1].addEventListener('change',()=>{
+    console.log('cambio');
+})
+opcionesDeIn[2].addEventListener('change',()=>{
+    console.log('cambio');
+})
+opcionesDeIn[3].addEventListener('change',()=>{
+    console.log('cambio');
+})
 
 //funciones
 /*
@@ -117,7 +128,7 @@ function saludar(nombre){
 }
 saludar("Martin");
 saludar("luis");
-*/
+
 /*
 // esto tambien se puede usar con numero y que haga calculos
 function saludar(nombre, apellido){
@@ -151,9 +162,9 @@ function saludar(){
 saludar();
 */
 
-
+/*
 //clase objetos
-/* objeto literal */
+//objeto literal 
 const personaje1={
     nombre:"Luis",
     apellido:"Gontero",
@@ -170,6 +181,7 @@ const personaje2={
         segundo:"Esteban",
     }
 };
+*/
 /*
 mostrar(personaje1);
 mostrar(personaje1("nombre"));
@@ -177,7 +189,7 @@ mostrar(personaje1);
 mostrar(personaje2("nombre"));
 mostrar(personaje2("hojos"));
 mostrar(personaje1.edad);
-*/
+//
 const hijosDeCaro = personaje2.hijos;
 console.log(hijosDeCaro);
 console.log(hijosDeCaro.primero);
@@ -211,6 +223,7 @@ console.log(auto4);
 console.log(auto4.color= "Rojo");
 */
 //funcion constructora + metodo(el metodo esta ligado a un objeto especifico)
+/*
 function Auto(marca, anio, motor, modelo){
     this.marca = marca;
     this.anio = anio;
@@ -254,6 +267,7 @@ console.log(frase.length)*/
 //clase arrays
 //son un tipo de datos que sirven para almacenar valores en forma de lista
 //siempre comienzan en la posicion 0
+/*
 const array=[];
 console.log(array);
 
@@ -277,6 +291,7 @@ console.log(array);
 mixto.push(44);
 console.log(mixto);
 */
+/*
 //como agregar elementos al principio
 mixto.push(44);
 console.log(mixto);
@@ -288,3 +303,54 @@ mixto.shift();
 console.log(mixto);
 //splice elimina de a barios y del medio
 
+*/
+
+/*
+//console.dir(document.body)
+//si fueran id
+//const h1 = document.getElementById('h1');
+//console.log(h1);
+const parrafo= document.getElementsByTagName('p');
+console.log(parrafo[2].innerHTML);//para ver el contenido de la etiqueta
+const parrafoClases = document.getElementsByClassName('row')
+console.log(parrafoClases[1].innerHTML)//le digo que me de el row en la posicion 1
+console.log(parrafoClases[0].innerText="este es un contenido unico")//le cambio lo que dice
+//crear elementos
+const texto = documente.createElement('p')
+texto.innerText= "soy un parrafo de js";
+document.body.append(texto);
+//deberia aparecer la palabra ingreso en el input pero no me sale (preguntar)
+contenedor.append(texto);
+const input = document.getElementById('ingreso')
+input.value= 'ingreso'
+*/
+//
+const ul= document.getElementById('lista')
+const nombres = ["Hugo", "Paco", "Luis"];
+for (const nombre of nombres) {
+    let li = document.createElement('li');
+    li.innerText= nombre;
+    ul.append(li)
+}
+//no se que esta mal pero deberia aparecer en html 
+const producto= {id:1, nombre:"Tela", precio:200}
+let concatenado= "id: " + producto.id + " Nombre: " + 
+producto.nombre + "precio: " + producto.precio;
+let templatesLiterals= `id ${producto.id}
+Nombre: ${producto.nombre}
+Precio: $ ${producto.precio}`
+contenedor.innerText= templatesLiterals
+//eventos//este codigo no anda, tiene un error
+const contador= document.querySelector('#contador'),
+sumar=document.querySelector('#sumar'),
+restar=document.querySelector('#restar');
+function cambio(num){
+    let cont = num++
+   contador.innerText= num++
+}
+sumar.addEventListener('click',()=>{
+    cambio(1)
+})
+restar.addEventListener('click',()=>{
+    cambio(-1)
+})
